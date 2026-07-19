@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MonitorShop.DataAccess.Context;
+using MonitorShop.Business.Abstract;
+using MonitorShop.Business.Concrete;
+using MonitorShop.DataAccess.Repositories;
 
 
 namespace MonitorShop.Web
@@ -17,6 +20,9 @@ namespace MonitorShop.Web
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            builder.Services.AddScoped<IProductService, ProductManager>();
 
             var app = builder.Build();
 
