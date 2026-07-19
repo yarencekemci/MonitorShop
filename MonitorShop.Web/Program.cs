@@ -1,3 +1,7 @@
+using Microsoft.EntityFrameworkCore;
+using MonitorShop.DataAccess.Context;
+
+
 namespace MonitorShop.Web
 {
     public class Program
@@ -8,6 +12,11 @@ namespace MonitorShop.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<MonitorShopDbContext>(options =>
+            {
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             var app = builder.Build();
 
