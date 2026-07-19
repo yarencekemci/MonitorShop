@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="MonitorShop.Business/MonitorShop.Business.csproj" />
+  <Project Path="MonitorShop.DataAccess/MonitorShop.DataAccess.csproj" />
+  <Project Path="MonitorShop.Entities/MonitorShop.Entities.csproj" />
   <Project Path="MonitorShop.Web/MonitorShop.Web.csproj" />
 </Solution>

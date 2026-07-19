@@ -1,17 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MonitorShop.Business\MonitorShop.Business.csproj" />
     <ProjectReference Include="..\MonitorShop.DataAccess\MonitorShop.DataAccess.csproj" />
     <ProjectReference Include="..\MonitorShop.Entities\MonitorShop.Entities.csproj" />
   </ItemGroup>
