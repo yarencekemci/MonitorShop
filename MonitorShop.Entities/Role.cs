@@ -4,7 +4,12 @@ using System.Text;
 
 namespace MonitorShop.Entities
 {
-    internal class Role
+    public class Role
     {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+
+        public List<User> Users { get; set; }
     }
 }

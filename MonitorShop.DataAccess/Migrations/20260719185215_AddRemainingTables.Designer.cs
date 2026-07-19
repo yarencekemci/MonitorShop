@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MonitorShop.DataAccess.Context;
 
@@ -11,9 +12,11 @@ using MonitorShop.DataAccess.Context;
 namespace MonitorShop.DataAccess.Migrations
 {
     [DbContext(typeof(MonitorShopDbContext))]
-    partial class MonitorShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260719185215_AddRemainingTables")]
+    partial class AddRemainingTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
