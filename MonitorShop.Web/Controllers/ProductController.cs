@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MonitorShop.Entities;
+using Microsoft.AspNetCore.Mvc;
 using MonitorShop.Business.Abstract;
 
 namespace MonitorShop.Web.Controllers
@@ -16,6 +17,19 @@ namespace MonitorShop.Web.Controllers
         {
             var values = _productService.GetAll();
             return View(values);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            _productService.Add(product);
+            return RedirectToAction("Index");
         }
     }
 }
