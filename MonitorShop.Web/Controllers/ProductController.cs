@@ -32,6 +32,15 @@ namespace MonitorShop.Web.Controllers
             return View(product);
         }
 
+        public IActionResult Delete(int id)
+        {
+            var product = _productService.GetById(id);
+
+            _productService.Delete(product);
+
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         public IActionResult Create(Product product)
         {
