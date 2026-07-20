@@ -38,5 +38,20 @@ namespace MonitorShop.Web.Controllers
             var category = _categoryService.GetById(id);
             return View(category);
         }
+
+        [HttpPost]
+        public IActionResult Edit(Category category)
+        {
+            _categoryService.Update(category);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var category = _categoryService.GetById(id);
+            _categoryService.Delete(category);
+
+            return RedirectToAction("Index");
+        }
     }
 }
