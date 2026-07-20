@@ -24,6 +24,8 @@ namespace MonitorShop.Web
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             builder.Services.AddScoped<IProductService, ProductManager>();
 
+            builder.Services.AddScoped<ICategoryService, CategoryManager>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
