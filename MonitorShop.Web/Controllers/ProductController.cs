@@ -25,10 +25,24 @@ namespace MonitorShop.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var product = _productService.GetById(id);
+            return View(product);
+        }
+
         [HttpPost]
         public IActionResult Create(Product product)
         {
             _productService.Add(product);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Product product)
+        {
+            _productService.Update(product);
             return RedirectToAction("Index");
         }
     }
