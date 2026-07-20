@@ -32,8 +32,13 @@
     </div>
 
     <div class="mb-3">
-        <label>Category Id</label>
-        <input asp-for="CategoryId" class="form-control" />
+        <label>Category</label>
+
+        <select asp-for="CategoryId"
+                asp-items="ViewBag.Categories"
+                class="form-control">
+            <option value="">Select Category</option>
+        </select>
     </div>
 
     <button type="submit" class="btn btn-success">
