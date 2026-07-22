@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<MonitorShop.Entities.Product>
+
+@{
     ViewData["Title"] = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -230,7 +232,7 @@
         <div class="row fill_height">
 
             <div class="banner_product_image">
-                <img src="~/onetech/images/banner_product.png"
+                <img src="~/onetech/images/monitorbg.png"
                      alt="Monitor" />
             </div>
 
@@ -340,6 +342,41 @@
 
             </div>
 
+        </div>
+
+        <div class="container mt-5 mb-5">
+            <h2>Featured Products</h2>
+
+            <div class="row">
+                @foreach (var product in Model)
+                {
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100">
+
+                            <img src="@product.ImageUrl"
+                                 class="card-img-top"
+                                 alt="@product.Name" />
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    @product.Name
+                                </h5>
+
+                                <p class="card-text">
+                                    @product.Price.ToString("N2") ₺
+                                </p>
+
+                                <p class="card-text">
+                                    Stock: @product.Stock
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
 
     </div>
