@@ -1,0 +1,347 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<header class="header">
+
+    <div class="top_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-row">
+
+                    <div class="top_bar_contact_item">
+                        <div class="top_bar_icon">
+                            <img src="~/onetech/images/phone.png" alt="Phone" />
+                        </div>
+                        +90 555 555 55 55
+                    </div>
+
+                    <div class="top_bar_contact_item">
+                        <div class="top_bar_icon">
+                            <img src="~/onetech/images/mail.png" alt="Email" />
+                        </div>
+                        info@monitorshop.com
+                    </div>
+
+                    <div class="top_bar_content ml-auto">
+                        <div class="top_bar_user">
+                            <div class="user_icon">
+                                <img src="~/onetech/images/user.svg" alt="User" />
+                            </div>
+
+                            <div>
+                                <a href="#">Register</a>
+                            </div>
+
+                            <div>
+                                <a href="#">Sign in</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header_main">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-2 col-sm-3 col-3 order-1">
+                    <div class="logo_container">
+                        <div class="logo">
+                            <a asp-controller="Home" asp-action="Index">
+                                MonitorShop
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                    <div class="header_search">
+                        <div class="header_search_content">
+                            <div class="header_search_form_container">
+
+                                <form action="#" class="header_search_form clearfix">
+
+                                    <input type="search"
+                                           class="header_search_input"
+                                           placeholder="Search for monitors..." />
+
+                                    <button type="submit"
+                                            class="header_search_button trans_300">
+
+                                        <img src="~/onetech/images/search.png"
+                                             alt="Search" />
+
+                                    </button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+
+                    <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+
+                        <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+
+                            <div class="wishlist_icon">
+                                <img src="~/onetech/images/heart.png" alt="Wishlist" />
+                            </div>
+
+                            <div class="wishlist_content">
+                                <div class="wishlist_text">
+                                    <a href="#">Wishlist</a>
+                                </div>
+
+                                <div class="wishlist_count">0</div>
+                            </div>
+
+                        </div>
+
+                        <div class="cart">
+                            <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+
+                                <div class="cart_icon">
+                                    <img src="~/onetech/images/cart.png" alt="Cart" />
+                                    <div class="cart_count">
+                                        <span>0</span>
+                                    </div>
+                                </div>
+
+                                <div class="cart_content">
+                                    <div class="cart_text">
+                                        <a href="#">Cart</a>
+                                    </div>
+
+                                    <div class="cart_price">0 ₺</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="main_nav">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <div class="main_nav_content d-flex flex-row">
+
+                        <div class="cat_menu_container">
+
+                            <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+
+                                <div class="cat_burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <div class="cat_menu_text">
+                                    Categories
+                                </div>
+
+                            </div>
+
+                            <ul class="cat_menu">
+                                <li>
+                                    <a href="#">Gaming Monitors</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Office Monitors</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">4K Monitors</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Curved Monitors</a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Ultrawide Monitors</a>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="main_nav_menu ml-auto">
+
+                            <ul class="standard_dropdown main_nav_dropdown">
+
+                                <li>
+                                    <a asp-controller="Home" asp-action="Index">
+                                        Home
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a asp-controller="Product" asp-action="Index">
+                                        Products
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a asp-controller="Category" asp-action="Index">
+                                        Categories
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<div class="banner">
+
+    <div class="banner_background"
+         style="background-image: url('/onetech/images/banner_background.jpg');">
+    </div>
+
+    <div class="container fill_height">
+
+        <div class="row fill_height">
+
+            <div class="banner_product_image">
+                <img src="~/onetech/images/banner_product.png"
+                     alt="Monitor" />
+            </div>
+
+            <div class="col-lg-5 offset-lg-4 fill_height">
+
+                <div class="banner_content">
+
+                    <h1 class="banner_text">
+                        Discover the New Era of Monitors
+                    </h1>
+
+                    <div class="banner_price">
+                        Starting from 12.000 ₺
+                    </div>
+
+                    <div class="banner_product_name">
+                        Gaming and Professional Monitors
+                    </div>
+
+                    <div class="button banner_button">
+                        <a asp-controller="Product" asp-action="Index">
+                            Shop Now
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="characteristics">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6 char_col">
+
+                <div class="char_item d-flex flex-row align-items-center justify-content-start">
+
+                    <div class="char_icon">
+                        <img src="~/onetech/images/char_1.png" alt="" />
+                    </div>
+
+                    <div class="char_content">
+                        <div class="char_title">Fast Delivery</div>
+                        <div class="char_subtitle">Secure shipping</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 char_col">
+
+                <div class="char_item d-flex flex-row align-items-center justify-content-start">
+
+                    <div class="char_icon">
+                        <img src="~/onetech/images/char_2.png" alt="" />
+                    </div>
+
+                    <div class="char_content">
+                        <div class="char_title">Easy Returns</div>
+                        <div class="char_subtitle">Return guarantee</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 char_col">
+
+                <div class="char_item d-flex flex-row align-items-center justify-content-start">
+
+                    <div class="char_icon">
+                        <img src="~/onetech/images/char_3.png" alt="" />
+                    </div>
+
+                    <div class="char_content">
+                        <div class="char_title">Secure Payment</div>
+                        <div class="char_subtitle">Protected checkout</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 char_col">
+
+                <div class="char_item d-flex flex-row align-items-center justify-content-start">
+
+                    <div class="char_icon">
+                        <img src="~/onetech/images/char_4.png" alt="" />
+                    </div>
+
+                    <div class="char_content">
+                        <div class="char_title">Customer Support</div>
+                        <div class="char_subtitle">We're here to help</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
