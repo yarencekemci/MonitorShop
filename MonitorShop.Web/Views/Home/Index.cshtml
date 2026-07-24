@@ -159,25 +159,18 @@
                             </div>
 
                             <ul class="cat_menu">
-                                <li>
-                                    <a href="#">Gaming Monitors</a>
-                                </li>
 
-                                <li>
-                                    <a href="#">Office Monitors</a>
-                                </li>
+                                @foreach (var category in ViewBag.Categories)
+                                {
+                                    <li>
+                                        <a asp-controller="Product"
+                                           asp-action="Index"
+                                           asp-route-categoryId="@category.Id">
+                                            @category.Name
+                                        </a>
+                                    </li>
+                                }
 
-                                <li>
-                                    <a href="#">4K Monitors</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Curved Monitors</a>
-                                </li>
-
-                                <li>
-                                    <a href="#">Ultrawide Monitors</a>
-                                </li>
                             </ul>
 
                         </div>
