@@ -13,5 +13,6 @@ namespace MonitorShop.Business.Abstract
         void Update(Product product);
 
         void Delete(Product product);
+        List<Product> GetProductsByCategory(int categoryId);
     }
 }

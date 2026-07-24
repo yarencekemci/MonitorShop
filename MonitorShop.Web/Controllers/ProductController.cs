@@ -18,10 +18,19 @@ namespace MonitorShop.Web.Controllers
             _categoryService = categoryService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int? categoryId)
         {
-            var values = _productService.GetAll();
-            return View(values);
+            if (categoryId.HasValue)
+            {
+                var filteredProducts = _productService
+                    .GetProductsByCategory(categoryId.Value);
+
+                return View(filteredProducts);
+            }
+
+            var products = _productService.GetAll();
+
+            return View(products);
         }
 
         [HttpGet]
@@ -71,6 +80,12 @@ namespace MonitorShop.Web.Controllers
         public IActionResult Delete(int id)
         {
             var product = _productService.GetById(id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
             _productService.Delete(product);
 
             return RedirectToAction("Index");
