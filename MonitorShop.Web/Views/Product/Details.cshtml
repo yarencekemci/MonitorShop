@@ -44,7 +44,13 @@
             </p>
 
             <button type="button"
-                    class="btn btn-primary btn-lg">
+                    class="btn btn-primary btn-lg"
+                    onclick="addToBasket(
+                @Model.Id,
+                '@Html.Raw(Model.Name.Replace("'", "\\'"))',
+                @Model.Price.ToString(System.Globalization.CultureInfo.InvariantCulture),
+                '@Html.Raw(Model.ImageUrl.Replace("'", "\\'"))'
+                )">
                 Add To Cart
             </button>
 

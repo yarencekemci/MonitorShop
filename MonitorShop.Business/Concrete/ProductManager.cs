@@ -1,7 +1,6 @@
 ﻿using MonitorShop.Business.Abstract;
 using MonitorShop.DataAccess.Repositories;
 using MonitorShop.Entities;
-using System.Linq; // where kullandık
 
 namespace MonitorShop.Business.Concrete
 {
@@ -41,6 +40,8 @@ namespace MonitorShop.Business.Concrete
                 .Where(x => x.CategoryId == categoryId)
                 .ToList();
         }
+
+        
 
         public void Update(Product product)
         {
