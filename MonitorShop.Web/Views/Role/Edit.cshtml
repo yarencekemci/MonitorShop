@@ -1,0 +1,26 @@
+﻿@model MonitorShop.Entities.Role
+
+@{
+    ViewData["Title"] = "Edit Role";
+}
+
+<h2>Edit Role</h2>
+
+<form asp-action="Edit" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-warning">
+        Update
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>

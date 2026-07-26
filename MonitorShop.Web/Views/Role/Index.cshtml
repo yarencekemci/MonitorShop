@@ -1,0 +1,40 @@
+﻿@model List<MonitorShop.Entities.Role>
+
+@{
+    ViewData["Title"] = "Role List";
+}
+
+<h2>Role List</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Add New Role</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Role Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">
+                        Edit
+                    </a>
+
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

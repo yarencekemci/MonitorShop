@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MonitorShop.Entities
+﻿namespace MonitorShop.Entities
 {
     public class Role
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
-        public List<User> Users { get; set; }
+        public List<User> Users { get; set; } = new List<User>();
     }
 }
