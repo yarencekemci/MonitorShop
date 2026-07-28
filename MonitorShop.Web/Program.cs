@@ -32,6 +32,8 @@ namespace MonitorShop.Web
 
             builder.Services.AddScoped<IBasketService, BasketManager>();
 
+            builder.Services.AddScoped<IOrderService, OrderManager>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

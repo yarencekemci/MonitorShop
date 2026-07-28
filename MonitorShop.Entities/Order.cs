@@ -14,8 +14,9 @@ namespace MonitorShop.Entities
 
         public decimal TotalPrice { get; set; }
 
-        public User User { get; set; }
+        public User User { get; set; } = null!;
 
         public List<OrderDetail> OrderDetails { get; set; }
+            = new List<OrderDetail>();
     }
 }
