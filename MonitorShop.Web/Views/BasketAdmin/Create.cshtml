@@ -1,0 +1,52 @@
+﻿@model MonitorShop.Entities.Basket
+
+@{
+    ViewData["Title"] = "Add Basket";
+}
+
+<h2>Add Basket</h2>
+
+<form asp-action="Create" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="UserId" class="form-label">User</label>
+
+        <select asp-for="UserId"
+                asp-items="ViewBag.Users"
+                class="form-control">
+
+            <option value="">Select User</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ProductId" class="form-label">Product</label>
+
+        <select asp-for="ProductId"
+                asp-items="ViewBag.Products"
+                class="form-control">
+
+            <option value="">Select Product</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Quantity" class="form-label"></label>
+
+        <input asp-for="Quantity"
+               type="number"
+               min="1"
+               class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Save
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>
