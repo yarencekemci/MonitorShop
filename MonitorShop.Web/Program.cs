@@ -28,6 +28,8 @@ namespace MonitorShop.Web
 
             builder.Services.AddScoped<IRoleService, RoleManager>();
 
+            builder.Services.AddScoped<IUserService, UserManager>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

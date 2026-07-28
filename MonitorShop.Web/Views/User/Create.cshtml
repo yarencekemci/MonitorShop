@@ -1,0 +1,45 @@
+﻿@model MonitorShop.Entities.User
+
+@{
+    ViewData["Title"] = "Add User";
+}
+
+<h2>Add User</h2>
+
+<form asp-action="Create" method="post">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="FullName" class="form-label"></label>
+        <input asp-for="FullName" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="RoleId" class="form-label">Role</label>
+        <select asp-for="RoleId"
+                asp-items="ViewBag.Roles"
+                class="form-control">
+            <option value="">Select Role</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Save
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancel
+    </a>
+
+</form>
