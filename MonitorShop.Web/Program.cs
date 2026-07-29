@@ -34,6 +34,8 @@ namespace MonitorShop.Web
 
             builder.Services.AddScoped<IOrderService, OrderManager>();
 
+            builder.Services.AddScoped<IOrderDetailService, OrderDetailManager>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

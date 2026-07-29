@@ -1,0 +1,66 @@
+﻿@model MonitorShop.Entities.OrderDetail
+
+@{
+    ViewData["Title"] = "Create Order Detail";
+}
+
+<div class="container mt-4">
+    <h2>Create Order Detail</h2>
+
+    <form asp-action="Create" method="post">
+
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="mb-3">
+            <label asp-for="OrderId" class="form-label"></label>
+
+            <select asp-for="OrderId"
+                    asp-items="ViewBag.Orders"
+                    class="form-select">
+                <option value="">Select Order</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ProductId" class="form-label"></label>
+
+            <select asp-for="ProductId"
+                    asp-items="ViewBag.Products"
+                    class="form-select">
+                <option value="">Select Product</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Quantity" class="form-label"></label>
+
+            <input asp-for="Quantity" class="form-control" />
+
+            <span asp-validation-for="Quantity"
+                  class="text-danger">
+            </span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="UnitPrice" class="form-label"></label>
+
+            <input asp-for="UnitPrice"
+                   class="form-control"
+                   type="number"
+                   step="0.01" />
+
+            <span asp-validation-for="UnitPrice"
+                  class="text-danger">
+            </span>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Save
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">
+            Back
+        </a>
+
+    </form>
+</div>
