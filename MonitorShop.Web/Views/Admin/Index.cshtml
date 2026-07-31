@@ -1,0 +1,88 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="row">
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>@ViewBag.ProductCount</h3>
+                <p>Products</p>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-desktop"></i>
+            </div>
+
+            <a asp-controller="Product"
+               asp-action="Index"
+               class="small-box-footer">
+                View Products
+                <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>@ViewBag.CategoryCount</h3>
+                <p>Categories</p>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-list"></i>
+            </div>
+
+            <a asp-controller="Category"
+               asp-action="Index"
+               class="small-box-footer">
+                View Categories
+                <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-warning">
+            <div class="inner">
+                <h3>@ViewBag.UserCount</h3>
+                <p>Users</p>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-users"></i>
+            </div>
+
+            <a asp-controller="User"
+               asp-action="Index"
+               class="small-box-footer">
+                View Users
+                <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-6">
+        <div class="small-box bg-danger">
+            <div class="inner">
+                <h3>@ViewBag.OrderCount</h3>
+                <p>Orders</p>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+
+            <a asp-controller="Order"
+               asp-action="Index"
+               class="small-box-footer">
+                View Orders
+                <i class="fas fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+
+</div>
