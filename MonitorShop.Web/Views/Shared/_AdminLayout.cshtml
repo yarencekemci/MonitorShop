@@ -8,7 +8,7 @@
 
     <title>@ViewData["Title"] - MonitorShop Admin</title>
 
-    <!-- Font Awesome -->
+    <!-- font awesome -->
     <link rel="stylesheet"
           href="~/adminlte/plugins/fontawesome-free/css/all.min.css" />
 
@@ -21,7 +21,7 @@
 
     <div class="wrapper">
 
-        <!-- Navbar -->
+        <!-- navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
             <ul class="navbar-nav">
@@ -54,10 +54,10 @@
         </nav>
 
 
-        <!-- Sidebar -->
+        <!-- sidebar -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-            <!-- Logo -->
+            <!-- logo -->
             <a asp-controller="Product"
                asp-action="Index"
                class="brand-link">
@@ -77,7 +77,7 @@
                         data-widget="treeview"
                         role="menu">
 
-                        <!-- Products -->
+                        <!-- products -->
                         <li class="nav-item">
 
                             <a asp-controller="Product"
@@ -93,7 +93,7 @@
                         </li>
 
 
-                        <!-- Categories -->
+                        <!-- categories -->
                         <li class="nav-item">
 
                             <a asp-controller="Category"
@@ -109,7 +109,7 @@
                         </li>
 
 
-                        <!-- Users -->
+                        <!-- users -->
                         <li class="nav-item">
 
                             <a asp-controller="User"
@@ -125,7 +125,7 @@
                         </li>
 
 
-                        <!-- Roles -->
+                        <!-- roles -->
                         <li class="nav-item">
 
                             <a asp-controller="Role"
@@ -141,7 +141,7 @@
                         </li>
 
 
-                        <!-- Baskets -->
+                        <!-- baskets -->
                         <li class="nav-item">
 
                             <a asp-controller="BasketAdmin"
@@ -157,7 +157,7 @@
                         </li>
 
 
-                        <!-- Orders -->
+                        
                         <li class="nav-item">
 
                             <a asp-controller="Order"
@@ -173,7 +173,7 @@
                         </li>
 
 
-                        <!-- Order Details -->
+                        
                         <li class="nav-item">
 
                             <a asp-controller="OrderDetail"
@@ -197,7 +197,7 @@
         </aside>
 
 
-        <!-- Page Content -->
+        
         <div class="content-wrapper">
 
             <section class="content-header">
@@ -232,7 +232,7 @@
         </div>
 
 
-        <!-- Footer -->
+        
         <footer class="main-footer">
 
             <strong>MonitorShop Admin Panel</strong>
@@ -246,13 +246,13 @@
     </div>
 
 
-    <!-- jQuery -->
+    
     <script src="~/adminlte/plugins/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap -->
+    
     <script src="~/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- AdminLTE -->
+    
     <script src="~/adminlte/dist/js/adminlte.min.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
