@@ -38,11 +38,6 @@ contains the business logic and related operations
 **Web**
 contains the MVC side of the project such as controllers and views
 
-### What I Learned
-
-While developing MonitorShop, I improved my understanding of ASP.NET Core MVC and layered architecture.
-
-I also gained more experience with Entity Framework Core, database operations and separating different responsibilities in a project.
 
 ------------
 
@@ -89,8 +84,3 @@ uygulamanın iş mantığı ve ilgili işlemler burada bulunuyor
 **Web**
 controller ve view gibi mvc tarafındaki yapılar burada bulunuyor
 
-### Bu Projede Neler Öğrendim
-
-MonitorShop projesini geliştirirken asp.net core mvc ve katmanlı mimari konusunda kendimi geliştirdim
-
-aynı zamanda entity framework core ile veritabanı işlemleri yapma ve bir projedeki farklı sorumlulukları katmanlara ayırma konusunda pratik yapma fırsatım oldu
